@@ -1,0 +1,182 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #393448;
+    color: #ffffff;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgb(255, 255, 255);
+}
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #a8a3a3;
+}
+nav {
+    display: flex;
+    gap: 20px;
+  
+}
+nav a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+.fiolet {
+    color: #845f9f;
+  }
+.dolor {
+    font-size: 40px;
+}
+
+
+
+h1 { text-align: center; margin: 20px 0; }
+
+  /* ----- КАРТКИ ----- */
+.plans {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto; /* */
+  }
+  
+.plan1 {
+    background: #a76fd1;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    
+  }
+  .plan2 {
+    background: #5c9f6e;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+  .plan3 {
+    background: #3f7ecb;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+  .plan4 {
+    background: #e99504;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+.price1 {
+    background: #fff;
+    color: #a76fd1;
+    padding: 25px 15px;
+    border-radius: 15px;
+    font-weight: bold;
+    margin-top: -30px;
+    display: inline-block;
+    width: 150px;
+    box-shadow: 4px 4px  #8561b3;
+  }
+
+  .price2 {
+    background: #fff;
+    color: #5c9f6e;
+    padding: 25px 15px;
+    border-radius: 15px;
+    font-weight: bold;
+    margin-top: -30px;
+    display: inline-block;
+    width: 150px;
+    box-shadow: 4px 4px  #188b5b;
+  }
+
+  .price3 {
+    background: #fff;
+    color: #3f7ecb;
+    padding: 25px 15px;
+    border-radius: 15px;
+    font-weight: bold;
+    margin-top: -30px;
+    display: inline-block;
+    width: 150px;
+    box-shadow: 4px 4px  #2a5ecd;
+  }
+
+  .price4 {
+    background: #fff;
+    color: #e99504;
+    padding: 25px 15px;
+    border-radius: 15px;
+    font-weight: bold;
+    margin-top: -30px;
+    display: inline-block;
+    width: 150px;
+    box-shadow: 4px 4px  #b57328;
+  }
+.features {
+    margin: 10px 0;
+    line-height: 30px;
+  }
+.btn4 {
+    background: #fff;
+    color: #e99504;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 150px;
+    padding: 15px 32px;
+    font-size: 15px;
+    border-radius: 30px;
+    box-shadow: 4px 4px  #b57328;
+  }
+
+  .btn1 {
+    background: #fff;
+    color: #a76fd1;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 150px;
+    padding: 15px 32px;
+    font-size: 15px;
+    border-radius: 30px;
+    box-shadow: 4px 4px  #8561b3;
+  }
+
+  .btn2 {
+    background: #fff;
+    color: #5c9f6e;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 150px;
+    padding: 15px 32px;
+    font-size: 15px;
+    border-radius: 30px;
+    box-shadow: 4px 4px  #188b5b;
+  }
+
+  .btn3 {
+    background: #fff;
+    color: #3f7ecb;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 150px;
+    padding: 15px 32px;
+    font-size: 15px;
+    border-radius: 30px;
+    box-shadow: 4px 4px  #2a5ecd;
+  }
