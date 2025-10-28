@@ -40,7 +40,7 @@ nav a {
 
 h1 { text-align: center; margin: 20px 0; }
 
-  /* ----- КАРТКИ ----- */
+  
 .plans {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));

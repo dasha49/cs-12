@@ -37,16 +37,19 @@ nav a {
 
 
 
-h1 { text-align: center; margin: 20px 0; }
+h1 { 
+  text-align: center; 
+  margin: 20px 0; 
+}
 
-  /* ----- КАРТКИ ----- */
+  
 .plans {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
     padding: 20px;
     max-width: 1000px;
-    margin: 0 auto; /* */
+    margin: 0 auto; 
   }
   
 .plan1 {

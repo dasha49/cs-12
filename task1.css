@@ -39,7 +39,7 @@ header>div:last-child{
     max-height: 700px;
     height: 700px;
 
-    background-image: url('./containaer_1.jpg');
+    background-image: url('./foto/./containaer_1.jpg');
     background-size: cover;
 
     display: flex;
