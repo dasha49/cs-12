@@ -1,0 +1,178 @@
+<html>
+<head>
+<style>
+  
+  *{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+  body{
+    font-family: "Arial", Helvetica, sans-serif;
+    background: #fff;
+    padding:60px 20px;
+    display:block;
+  }
+
+  .grid-wrap{
+    max-width: 1120px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+      "top-left top-center top-right" 
+      "mid-left card-wrap mid-right"
+      "bot-left bot-center bot-right";
+    gap: 28px;
+    justify-content:center;
+    align-items:start;
+  }
+
+  figure.photo{
+    overflow:hidden;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+   
+    background:#ddd;
+  }
+
+  figure.photo img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+
+  .top-left, .top-right {
+    width:330px;
+    height:260px;
+     }
+
+  .top-center { 
+    width:420px;
+    height:320px;
+  }
+
+  .mid-left, .mid-right {
+    width:360px;
+    height:300px; 
+    }
+
+  .bot-left, .bot-right {
+    width:330px;
+    height:260px;
+     }
+
+  .bot-center {
+    width:420px; 
+    height:320px;
+     }
+
+  .top-left {
+    grid-area: top-left;
+    transform: translate(110px, 110px); 
+}
+
+  .top-center {
+    grid-area: top-center; 
+    transform: translateY(30px); 
+    margin-left: 85px; 
+}
+
+  .top-right {
+    grid-area: top-right; 
+    transform: translate(-90px, 110px); 
+}
+
+  .mid-left { 
+    grid-area: mid-left; 
+    transform: translate(45px, 50px);
+}
+  .mid-right { 
+    grid-area: mid-right; 
+    transform: translate(-45px, 50px); 
+}
+
+  .bot-left { 
+    grid-area: bot-left; 
+    transform: translate(110px, -50px); 
+}
+  .bot-center { 
+    grid-area: bot-center; 
+    transform: translateY(-35px);  
+    margin-left: 85px;
+}
+  .bot-right { 
+    grid-area: bot-right;
+    transform: translate(-90px, -50px); 
+}
+
+  .card-wrap {
+    grid-area: card-wrap;
+    width:600px;
+    height:400px;
+    background:#fff;
+    box-shadow:0 12px 32px rgba(0,0,0,.16);
+    z-index:5;
+  }
+
+  .card{
+    text-align:center;
+    padding:36px 44px;
+  }
+  .card h2{
+    font-size:36px;
+    margin-bottom:10px;
+    margin-top: 30px;
+    margin-top: 80px;
+  }
+  .card p{
+    color:#4b5563;
+    line-height:1.7;
+    font-size:16px;
+    margin:0 auto;
+    max-width:80%;
+  }
+  .card .btn{
+    display:inline-block;
+    margin-top:18px;
+    background:#e74a3c;
+    color:#fff;
+    padding:11px 24px;
+    text-decoration:none;
+    font-weight:700;
+  }
+
+
+    .btn:hover{
+      background-color: #bb1e10;
+    }
+
+</style>
+</head>
+<body>
+
+  <main class="grid-wrap">
+    <figure class="photo top-left"><img src="foto/girl1.png" alt=""></figure>
+    <figure class="photo top-center"><img src="foto/girl2.png" alt=""></figure>
+    <figure class="photo top-right"><img src="foto/girl3.png" alt=""></figure>
+
+    <figure class="photo mid-left"><img src="foto/girl6.png" alt=""></figure>
+
+    <div class="card-wrap">
+      <article class="card">
+        <h2>It's Only Fashion</h2>
+        <p>Sequins, sweeping necklines, big hair, dramatic eyes, a come-hither stare.
+           Taking names, turning heads and setting trends. She's a brick house.</p>
+        <a class="btn" href="#">view all</a>
+      </article>
+    </div>
+
+    <figure class="photo mid-right"><img src="foto/girl4.png" alt=""></figure>
+
+    <figure class="photo bot-left"><img src="foto/girl5.png" alt=""></figure>
+    <figure class="photo bot-center"><img src="foto/girl7.png" alt=""></figure>
+    <figure class="photo bot-right"><img src="foto/gril8.png" alt=""></figure>
+  </main>
+
+</body>
+</html>

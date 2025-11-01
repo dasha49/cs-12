@@ -1,56 +1,178 @@
-
 <html>
 <head>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url(foto/bild.jpeg);
+      background-position-y: 340px;
+      
+      background-repeat: no-repeat;
+      background-size: cover; 
+      position: relative;
 
-<link rel="stylesheet" href="flex2.css">
+      
+      
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px;
+      gap: 20px;
+    }
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 350px;
+    }
+
+    .gold {
+      background: #b98f2f9c;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      height: 300px;
+      box-sizing: border-box;
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .row {
+      display: flex;
+      gap: 20px;
+    }
+
+    .photo,
+    .banner,
+    .paper {
+      width: 300px;
+      height: 300px;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .banner {
+      color: #c9a247;
+      font-size: 36px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 1.2;
+      padding: 10px;
+      padding: 75px;
+    }
+
+    .paper {
+      background: #fff;
+      color: #444;
+      flex-direction: column;
+      padding: 20px;
+      text-align: left;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 620px; 
+      height: 300px;
+    }
+
+    .paper p {
+      line-height: 1.5;
+      color: #938b8b;
+    }
+
+    .btn {
+      display: inline-block;
+      border: 1px solid #ddd;
+      padding: 10px 20px;
+      
+      text-decoration: none;
+      color: #938b8b;
+      font-weight: bold;
+      margin-top: 50px;
+    }
+
+    .kk {
+      margin-top: 20px;
+      width: 350px;
+    }
+    
+
+    .gold h2{
+      margin-top: 110px ;
+    }
+
+    .gold p{
+      line-height: 2;
+      margin-top: 0;
+    }
+
+    .fon{
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(0, 0, 0, 0.541), rgba(0, 0, 0, 0.403));
+      transform: translateY(340px);
+      height: 800px;
+      z-index: 0;
+      
+    }
+
+    
+  </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="grid">
-    <div class="block">
-      <div class="aside">
-        <h3 class="hh3">Build Your Amazing Website</h3>
-        <p class="paragraph">Quisque non est velit. Phasellus ac enim facilisis, pulvinar turpis sit amet, faucibus erat. Aliquam ac ex
-            consectetur, venenatis mi et,
-            dignissim tortor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin faucibus
-            bibendum felis ac ullamcorper.
-            Quisque non pulvinar enim, blandit laoreet dolor.</p>
-      </div>
-      <div class="pysto"></div></div>
-
-      <div class="top">
-        <img src="foto/kk1.png" alt="">
-      </div>
-
-      <div class="right">
-        <img src="foto/kk2.png" alt="">
-      </div>
-      
-      <div class="pop">
-        <img src="" alt="">
-      </div>
-      
+  <div class="fon"></div>
+  <div class="container">
     
-      <section class="hero">
-        <h1>WE ARE<br>CREATIVE<br>AGENCY</h1>
-      </section>
+    
+    <div class="left">
+        <div class="gold">
+          <h2>Build Your Amazing Website</h2>
+          <p>Quisque non est velit. Phasellus ac enim facilisis, pulvinar turpis sit amet, faucibus erat.
+             Aliquam ac ex consectetur, venenatis </p>
+             
+        </div>
+        <div class="gold" style="height: 320px;"><p>mi et, dignissim tortor. Cum sociis natoque penatibus et magnis dis parturient  montes, nascetur ridiculus mus. Proin faucibus bibendum felis ac ullamcorper. 
+              Quisque non pulvinar enim, blandit laoreet dolor.</p></div>
+      
+      <div class="photo kk"><img src="foto/oppppp.png" alt="Hook"></div>
+    </div>  
 
-      <div class="img1">
-        <img src="foto/kk3.png" alt="">
+    <div class="right">
+      <div class="row top">
+        <div class="photo"><img src="foto/opp.png" alt="Plant and chart"></div>
+        <div class="photo"><img src="foto/op.png" alt="Laptop"></div>
       </div>
 
-      <div class="img2">
-        <img src="foto/kk4.png" alt="">
+      <div class="row mid">
+        <div class="banner">WE ARE<br>CREATIVE<br>AGENCY</div>
+        <div class="photo"><img src="foto/oppp.png" alt="Folders"></div>
       </div>
 
-      <div class="text">
-        <p class="textt">Morbi eros lorem, imperdiet a dictum ac, consectetur vel lacus. Aenean gravida
-            posuere elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-            mus. Duis lacinia et urna sit amet congue. Pellentesque vel leo a eros sollicitudin varius a ac 
-            lacus. Aliquam viverra laoreet aliquet.</p>
-        <button class="btn">READ MORE</button>
+      <div class="row bot">
+        <div class="paper">
+          <p>Morbi eros lorem, imperdiet a dictum ac, consectetur vel lacus. Aenean gravida posuere elit. Cum sociis natoque
+             penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis lacinia et urna sit amet congue.
+             Pellentesque vel leo a eros sollicitudin varius a ac lacus. Aliquam viverra laoreet aliquet.</p>
+          <a href="#" class="btn">READ MORE</a>
+        </div>
       </div>
     </div>
   </div>
+  
 </body>
 </html>

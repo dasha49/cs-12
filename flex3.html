@@ -1,41 +1,35 @@
-
 <html>
 <head>
 <style>
-  :root{
-    --gap:28px;          
-    --w:1120px;          
-    --card-w:640px;      
-    --shadow:0 12px 32px rgba(0,0,0,.16);
-    --radius:6px;
+
+  *{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
   }
 
-  *{box-sizing:border-box;margin:0;padding:0}
   body{
     font-family:Arial,Helvetica,sans-serif;
     background:#fff;
     display:flex;
-    min-height:100vh;
     justify-content:center;
     align-items:flex-start;
   }
 
   .wrap{
-    width:var(--w);
     margin:60px 16px;
     position:relative;
   }
 
-  /* ===== ВЕРХНІ 3 ФОТО ===== */
+  
   .top{
     display:flex;
-    gap:var(--gap);
+    gap:28px;
     justify-content:center;
     align-items:flex-end;
   }
   .ph{
     position:relative;
-    border-radius:var(--radius);
     overflow:hidden;
     box-shadow:0 6px 18px rgba(0,0,0,.08);
   }
@@ -47,117 +41,142 @@
     object-fit:cover;
   }
 
-  .a{width:330px;height:260px}          
-  .b{width:420px;height:320px}          
-  .c{width:360px;height:240px;transform:translateY(22px)} 
+  .a{
+    width:330px;
+    height:260px;
+  }
 
-  
+  .b{
+    width:420px;
+    height:320px;
+  }    
+
+  .c{
+    width:360px;
+    height:240px;
+  }
+ 
   .card{
     width: 600px;
-    height: 400px;
-    margin:-30px auto -10px; 
+    height: 400px; 
+    margin:-20px auto -30px;  
     background:#fff;
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
+    box-shadow:0 12px 32px rgba(0,0,0,.16);
     text-align:center;
-    padding:36px 44px;
+    padding:48px 54px;
     position:relative;
     z-index:5;
   }
   .card h2{
-    font-size:36px;
-    margin-bottom:10px;
-    margin-top: 50px;
+    font-size:38px;
+    margin-bottom:14px;
+    margin-top: 60px;
   }
   .card p{
     color:#4b5563;
     line-height:1.7;
+    font-size:18px;
   }
   .btn{
     display:inline-block;
-    margin-top:18px;
+    margin-top:22px;
     background:#e74a3c;
     color:#fff;
-    padding:11px 24px;
-    border-radius:4px;
+    padding:12px 26px;
     text-decoration:none;
     font-weight:700;
   }
 
+  .cent{
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pp{
+    display: flex;
+    flex-direction: row;
+  }
+
   .bottom{
     display:flex;
-    gap:var(--gap);
+    gap:28px;
     justify-content:center;
     align-items:flex-start;
+    margin-top:-5px; 
   }
+
   .col{
     display:flex;
     flex-direction:column;
-    gap:var(--gap);
+    gap:28px;
   }
-  .left{
-    width:360px;
-  }
-  .mid {
-    width:var(--card-w)
-  }
-  .right{
-    width:360px;
-    
-  }
+  
 
-  /* лівий стовпець */
+  
   .d{
     width:360px;
     height:300px;
+    transform: translateX(30px);
   }
+
   .e{
     width:260px;
     height:200px;
     align-self:flex-start;
-  }
+ }
 
-  /* центральне нижнє фото — опущене ще нижче */
   .h{
-    width:var(--card-w);
-    height:300px;
-    transform:translateY(110px); 
-  }
-
-  /* правий стовпець */
-  .f{width:360px;
+    width:420px;
     height:320px;
-    transform:translateY(-12px);
-  }
-  .g{width:300px;
-    height:240px;
-    align-self:flex-end;
   }
 
   
+  .f{
+    width:360px;
+    height:300px;
+    transform: translateX(-30px);
+  }
+
+  .g{
+    width:300px;
+    height:240px;
+    align-self:flex-end;
+    }
+
+    .btn:hover{
+      background-color: #bb1e10;
+    }
+
 </style>
 </head>
 <body>
   <main class="wrap">
-    <!-- Верхні 3 фото -->
     <section class="top">
-      <figure class="ph a"><img src="foto/girl1.png" alt="left top"></figure>
+      <figure class="ph a"><img src="foto/girl1.png" alt=" top"></figure>
       <figure class="ph b"><img src="foto/girl2.png" alt="center top big"></figure>
-      <figure class="ph c"><img src="foto/girl3.png" alt="right top"></figure>
+      <figure class="ph c"><img src="foto/girl3.png" alt=" top"></figure>
     </section>
 
-    <!-- Центральна картка -->
-    <section class="card">
-      <h2>It's Only Fashion</h2>
-      <p>Sequins, sweeping necklines, big hair, dramatic eyes, a come-hither stare.
+    <div class="cent">  
+      <div class="pp">
+        <figure class="ph d col "><img src="foto/girl6.png" alt="man portrait"></figure>
+      </div>
+      <div class="card">
+        <h2>It's Only Fashion</h2>
+        <p>Sequins, sweeping necklines, big hair, dramatic eyes, a come-hither stare.
          Taking names, turning heads and setting trends. She's a brick house.</p>
-      <a class="btn" href="#">view all</a>
-    </section>
+        <a class="btn" href="#">view all</a>
+      </div>
+      <div>
+        <figure class="ph f col "><img src="foto/girl4.png" alt="asian girl"></figure>
+      </div>
+    </div>
 
-    <!-- Нижні 3 колонки -->
     <section class="bottom">
-      <div class="col left">
-        <figure class="ph d"><img src="foto/girl6.png" alt="man portrait"></figure>
+      <div class="col ">
         <figure class="ph e"><img src="foto/girl5.png" alt="bw woman"></figure>
       </div>
 
@@ -165,8 +184,7 @@
         <figure class="ph h"><img src="foto/girl7.png" alt="city double exposure"></figure>
       </div>
 
-      <div class="col right">
-        <figure class="ph f"><img src="foto/girl4.png" alt="asian girl"></figure>
+      <div class="col ">
         <figure class="ph g"><img src="foto/gril8.png" alt="striped bw"></figure>
       </div>
     </section>
