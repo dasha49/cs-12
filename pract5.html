@@ -1,0 +1,45 @@
+<!DOCTYPE >
+<head>
+    
+</head>
+<body>
+        <h1>Конвертатор у римські цифри:</h1>
+        <input type="number" id="input" placeholder="Введіть число..">
+        <button onclick=" convert()">Конвертувати</button>
+        <div id="res"></div>
+
+    <script>
+        function convert() {
+            let chisla = parseInt(document.getElementById("input").value);
+            let resultat = "";
+            if(chisla <= 0)
+            {
+                resultat = "Число повинно бути більше 0!";
+            }
+            const romanNumerals = [ 
+                ["M", 1000],
+                ["CM", 900],
+                ["D", 500],
+                ["CD", 400],
+                ["C", 100],
+                ["XC", 90],
+                ["L", 50],
+                ["XL", 40],
+                ["X", 10],
+                ["IX", 9],
+                ["V", 5],
+                ["IV", 4],
+                ["I", 1]
+            ];
+            for (let [roman, value] of romanNumerals) {
+                while (chisla >= value) {
+                    resultat += roman;
+                    chisla -= value;
+                }
+            }
+            document.getElementById("res").textContent = resultat;
+        }
+    </script>
+    <script src="file.js"></script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!doctype html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f5f5f5;
+      --card: #fff;
+      --muted: #9ca3af;
+      --accent: #111827;
+      --radius: 16px;
+      --gap: 15px;
+      --shadow: 0 10px 28px rgba(0,0,0,0.06);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--accent);
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .wrap {
+      display: grid;
+      gap: var(--gap);
+      max-width: 1500px;
+      width: 100%;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: start;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      width: 960px;
+    }
+
+    .text {
+      flex: 1;
+    }
+
+    .text h2 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .text p {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 360px;
+    }
+
+    /* ---------- PHONE ---------- */
+    .phone-area {
+      position: relative;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .phone img {
+      width: 260px;
+      height: auto;
+      border-radius: 40px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    }
+
+    .bubble {
+      position: absolute;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 16px;
+      border-radius: 999px;
+      line-height: 1.3;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+      max-width: 210px;
+    }
+
+    .b-left { background: #111; color: #fff; left: 5%; }
+    .b-right { background: #fff; color: #111; border: 1px solid #eee; right: 5%; }
+    .b1 { top: 18%; }
+    .b2 { top: 36%; }
+    .b3 { top: 55%; }
+    .b4 { top: 72%; }
+
+    /* ---------- RIGHT COLUMN ---------- */
+    .stack {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap);
+    }
+
+    .stack .card {
+      height: 350px; /* Фіксована висота для обох карток */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card.dark {
+      background: #0b0b0b;
+      color: #fff;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin: 8px 0;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .kpi {
+      font-size: 48px;
+      font-weight: 800;
+    }
+
+    /* ---------- BOTTOM GRID ---------- */
+    .bottom {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: var(--gap);
+    }
+
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .pill {
+      background: #f3f5f7;
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    /* ---------- OPTIONAL HOVER EFFECT ---------- */
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px rgba(0,0,0,0.08);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="text">
+        <h2>Effortless Collaboration</h2>
+        <p>Real-time updates and fast replies that make you feel like we’re right there with you.</p>
+      </div>
+
+      <div class="phone-area">
+        <div class="phone"><img src="foto/mobile-bg.png" alt="Phone"></div>
+        <div class="bubble b-left b1">Just saw the first draft - this is 🔥🔥🔥</div>
+        <div class="bubble b-right b2">Yes! So glad you like it. Want me to prep a second direction too?</div>
+        <div class="bubble b-left b3">That would be amazing. You're killing it.</div>
+        <div class="bubble b-right b4">Already on it. You'll have it by tomorrow afternoon.</div>
+      </div>
+    </div>
+
+    <!-- RIGHT STACK -->
+    <div class="stack">
+      <div class="card dark">
+        <div class="kpi">+85%</div>
+        <h3>Higher Conversion Rates</h3>
+        <p>Designs and content that keep people clicking, scrolling, and sharing.</p>
+      </div>
+
+      <div class="card">
+        <h3>Stronger Online Presence</h3>
+        <p>Rank higher, get found faster, and stay top-of-mind.</p>
+        <div class="pills">
+          <span class="pill">+3k Downloads</span>
+          <span class="pill">+200 Countries</span>
+          <span class="pill">+30k Followers</span>
+          <span class="pill">+240k Likes</span>
+          <span class="pill">+1M Impressions</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM GRID -->
+    <div class="bottom">
+      <div class="card dark" style="text-align:center;">
+        <p style="color:#9aa1a8;">Projects launched in as little as</p>
+        <div style="font-size:64px; font-weight:800;">3 weeks</div>
+      </div>
+
+      <div class="card">
+        <h3>Increased Sales</h3>
+        <p>Clear messaging and conversion-focused design that drives real revenue.</p>
+      </div>
+</div>
+      <!-- <div class="card">
+        <h3>Stronger Online Presence</h3>
+        <div class="pills">
+          <span class="pill">+30k Followers</span>
+        </div>
+      </div> -->
+    
+
+  </div>
+</body>
+</html>
