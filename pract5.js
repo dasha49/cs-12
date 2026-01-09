@@ -2,10 +2,10 @@ const array = ["Hello World"];
 const golosni = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
 function countVowels(arr) 
 {
-    const str = arr.join(''); // забираємо пробіли як що вони існують
-    let counter = 0; //лічильник. Починаємо з нуля.
+    const str = arr.join(''); 
+    let counter = 0; 
     for (let i = 0; i < str.length; i++) {
-        if (golosni.includes(str[i])) {  //str[i] — поточна літера
+        if (golosni.includes(str[i])) {  
             counter += 1;
         }
     }
