@@ -1,11 +1,4 @@
-<!doctype html>
-<html>
-<head>
-
-
-
-<style>
-    * { 
+ * { 
       box-sizing: border-box; 
       margin: 0; 
       padding: 0; 
@@ -302,70 +295,3 @@
  .flame{
   width: 30px;
  }
-
-
-
-</style>
-
-
-
-</head>
-<body>
-    <div class="all">
-        <div class="m">
-        <div class="hero">
-             <div class="text">
-                <h2 class="niz">Effortless Collaboration</h2>
-                <p class="niz">Real-time updates and fast replies that make you feel like we’re right there with you.</p>
-                
-             </div>
-
-          <div class="phone-area">
-            <div class="phone"><img src="foto/mobile-bg.png" alt="Phone"></div>
-            <div class="dodat">
-            <div class="bubble b-left b1">Just saw the first draft - this is <img class="flame" src="foto/flame.png" alt=""><img class="flame" src="foto/flame.png" alt=""><img class="flame" src="foto/flame.png" alt=""></div>
-            
-          
-          </div>
-            <div class="bubble b-right b2">Yes! So glad you like it. Want me to prep a second direction too?</div>
-            <div class="bubble b-left b3">That would be amazing. You're killing it.</div>
-            <div class="bubble b-right b4">Already on it. You'll have it by tomorrow afternoon.</div>
-          </div>
-        </div>
-
-        <div class="bottom" >
-            <div class="card black" style="background-color: black;">
-                <p style="color:#7f858f;" class="project">Projects launched in as little as</p>
-                <div  class="weeks">3 weeks</div>
-            </div>
-
-            <div class="card ">
-                <p class="inc">Increased Sales</p>
-                <p style="margin-left: 35px; color: #7f858f;">Clear messaging and conversion-focused design that <br> drives real revenue.</p>
-            </div>
-        </div>
-        </div>
-
-     <div class="stack">
-      <div class="card1 dark">
-        <div class="kpi">+85%</div>
-        <p class="v">Higher Conversion Rates</p>
-        <p class="b">Designs and content that keep people clicking, <br>scrolling, and sharing.</p>
-      </div>
-
-      <div class="card1">
-        <p class="stronger">Stronger Online Presence</p>
-        <p style="margin-left: 35px; color: #7f858f;">Rank higher, get found faster, and stay top-of-mind.</p>
-        <div class="pills">
-          <span class="pill pill1 h1 ">+3k Downloads</span>
-          <span class="pill pill2 h2">+200 Countries</span>
-          <span class="pill pill3 h3">+30k Followers</span>
-          <span class="pill pill4 h4">+240k Likes</span>
-          <span class="pill pill5 h5">+1M Impressions</span>
-        </div>
-      </div>
-    </div>
-    </div>
-</body>
-</html>
-
