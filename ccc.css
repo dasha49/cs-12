@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #111;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.nav a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #111;
+}
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.primary {
+  background: #000;
+  color: #fff;
+}
+
+/* Hero */
+.hero {
+  padding: 80px 40px;
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Tools grid */
+.tools {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 40px;
+  height: 800px;
+}
+
+.card {
+  padding: 40px 20px;
+  border-radius: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Card colors */
+.blue { background: #e8f1ff; }
+.purple { background: #f1e8ff; }
+.pink { background: #ffe8f1; }
+.red { background: #ffe8e8; }
+.orange { background: #fff0e0; }
+.yellow { background: #fff9d6; }
+.green { background: #e8fff1; }
+.mint { background: #e6fffb; }
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 60px;
+  color: #bbb;
+  font-size: 24px;
+}

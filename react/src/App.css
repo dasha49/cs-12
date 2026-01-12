@@ -1,0 +1,103 @@
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 96px 60px;
+}
+
+.heroText {
+  max-width: 560px;
+}
+
+
+.heroText p {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 36px;
+  max-width: 520px;
+}
+.heroButtons {
+  display: flex;
+  gap: 16px;
+}
+
+.btn {
+  padding: 14px 26px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.btnPrimary {
+  background: #0066ff;
+  color: #fff;
+}
+
+.btnOutline {
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #111;
+}
+.palette {
+  display: flex;
+  height: 340px;
+  width: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.color {
+  flex: 1;
+}
+
+.c1 { background: #ff7a7a; }
+.c2 { background: #ffb3b3; }
+.c3 { background: #ffd6d6; }
+.c4 { background: #b9f3f3; }
+.c5 { background: #7ceeee; }
+.toolsSection {
+  padding: 60px;
+}
+
+.toolsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.toolCard {
+  padding: 22px;
+  border-radius: 14px;
+  transition: 0.2s;
+}
+
+.toolCard:hover {
+  transform: translateY(-4px);
+}
+
+.toolCard h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.toolCard p {
+  font-size: 14px;
+  color: #555;
+}
+
+.blue { background: #e8f0ff; }
+.pink { background: #ffe8ef; }
+.orange { background: #fff1e1; }
+.green { background: #e9f7ef; }
+.purple { background: #f1eaff; }
+.footerText {
+  text-align: center;
+  padding: 80px 20px;
+  color: #ddd;
+  font-size: 56px;
+  font-weight: 800;
+}

@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body, html, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* LOGIN PAGE CONTAINER */
+.loginPage {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* LEFT SIDE */
+.left {
+    width: 50%;
+    padding: 80px 90px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+}
+
+.form {
+    max-width: 360px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.passwordWrapper {
+    position: relative;
+}
+
+.passwordWrapper::after {
+    content: "👁";
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.signin {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.signin a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.terms {
+    position: absolute;
+    bottom: 20px;
+    left: 90px;
+    font-size: 12px;
+    color: #777;
+}
+
+.terms a {
+    color: #444;
+    text-decoration: none;
+}
+
+/* RIGHT SIDE */
+.right {
+    width: 50%;
+    background: linear-gradient(
+        135deg,
+        #ff4ecd,
+        #c77dff,
+        #7dd3fc,
+        #bef264
+    );
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .loginPage {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
+    .terms {
+        position: static;
+        margin-top: 40px;
+        text-align: center;
+    }
+}
