@@ -4,7 +4,6 @@ import { getPalette, getRandomPalette } from './shared/colorPaletteGenerator'
 import { HoverColorLetters } from './components/hoverColorLetters/hoverColorLetters';
 import { Header } from './components/header/header.component';
 
-
 function App() {
   console.log('r', getRandomPalette())
   console.log(getPalette('#1a5e63'))
@@ -44,13 +43,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
-
