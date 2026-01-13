@@ -1,18 +1,7 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
 
-body, html, #root {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
 
 /* LOGIN PAGE CONTAINER */
-.loginPage {
+.registrationPage {
     display: flex;
     min-height: 100vh;
 }
@@ -69,7 +58,7 @@ input {
     cursor: pointer;
 }
 
-button {
+header_signupBtn__l314O {
     width: 100%;
     padding: 13px;
     background: #2563eb;
@@ -81,9 +70,7 @@ button {
     margin-top: 10px;
 }
 
-button:hover {
-    background: #1d4ed8;
-}
+
 
 .signin {
     margin-top: 20px;
@@ -120,6 +107,17 @@ button:hover {
         #bef264
     );
 }
+
+
+.op{
+    border-radius: 7px;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    background: #2563eb;
+    color: white;
+}
+
 
 /* RESPONSIVE */
 @media (max-width: 900px) {

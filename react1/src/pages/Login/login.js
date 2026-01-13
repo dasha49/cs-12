@@ -42,11 +42,9 @@
 
 
 import './login.css'
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export const Login = () => {
-  const navigate = useNavigate() // хук для переходу
-
   return (
     <div className="loginPage">
       <div className="left">
@@ -64,17 +62,16 @@ export const Login = () => {
           <div className="passwordWrapper">
             <input type="password" placeholder="Password" />
           </div>
-
-          <button>Create your free account</button>
+          <Link to="/" style={{ cursor: 'pointer', color: '#2563eb', textDecoration: 'underline' }}>
+              <button className='op'>Create your free account</button>
+            </Link>
+          
 
           <p className="signin">
             Already have an account?{' '}
-            <span 
-              onClick={() => navigate('/')} 
-              style={{ cursor: 'pointer', color: '#2563eb', textDecoration: 'underline' }}
-            >
-              Sign in
-            </span>
+            <a>Sign in</a>
+              
+           
           </p>
         </div>
 
