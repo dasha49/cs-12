@@ -11,6 +11,17 @@ import  SpecialColor from './pages/SpecialColor/specialcolor'
 // import { Registration } from './pages/Registration/registration/'
 
 
+// 🔹 Генератор випадкового кольору
+const getRandomColor = () => {
+  const letters = '0123456789ABCDEF'
+  let color = '#'
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)]
+  }
+  return color
+}
+
+
 
 function App() {
   const PALETTE_SIZE = 5
@@ -24,6 +35,20 @@ function App() {
     }, 2000)
     return () => clearInterval(id)
   }, [])
+
+
+// 🔹 COLOR OF THE DAY (оновлюється при reload сторінки)
+  const [dailyColor] = useState(getRandomColor())
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setMainPalette(getRandomPalette(PALETTE_SIZE))
+    }, 2000)
+
+    return () => clearInterval(id)
+  }, [])
+
+  
 
   return (
     <div className="App">
@@ -131,7 +156,7 @@ function App() {
                   </div>
 
                   {/* <div className="color-cardd"> */}
-                  <Link to="/special-color" className="color-carddd">
+                  {/* <Link to="/special-color" className="color-carddd">
 
 
                     <small>COLOR OF THE DAY</small>
@@ -147,6 +172,36 @@ function App() {
                         <p>
                           Intense violet-black depths fill any space with
                           intrigue and boldness.
+                        </p>
+                      </div>
+                    </div>
+
+                  </Link> */}
+
+
+
+
+
+
+
+                       <Link to="/special-color" className="color-carddd">
+                    <small>COLOR OF THE DAY</small>
+
+                    <div className="color-box">
+                      <div className="color-left">
+                        <div
+                          className="color-sample"
+                          style={{ backgroundColor: dailyColor }}
+                        ></div>
+
+                        <div className="color-hex">{dailyColor}</div>
+                      </div>
+
+                      <div className="color-innfo">
+                        <h3>Daily Random Color</h3>
+                        <p>
+                          This color is generated automatically every time you
+                          reload the page.
                         </p>
                       </div>
                     </div>
@@ -272,3 +327,12 @@ function App() {
 }
 
 export default App
+
+
+
+
+
+
+
+
+
