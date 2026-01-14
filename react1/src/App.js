@@ -38,7 +38,25 @@ function App() {
 
 
 // 🔹 COLOR OF THE DAY (оновлюється при reload сторінки)
-  const [dailyColor] = useState(getRandomColor())
+  // const [dailyColor] = useState(getRandomColor())
+
+
+//   const [dailyColor] = useState(() => {
+//   const newColor = getRandomColor()
+//   localStorage.setItem('dailyColor', newColor)
+//   return newColor
+// })
+
+
+const [dailyColor, setDailyColor] = useState('#000000')
+
+useEffect(() => {
+  const newColor = getRandomColor()
+  localStorage.setItem('dailyColor', newColor)
+  setDailyColor(newColor)
+}, [])
+
+
 
   useEffect(() => {
     const id = setInterval(() => {
