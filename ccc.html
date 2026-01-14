@@ -1,43 +1,768 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Color Palettes Generator</title>
-  <link rel="stylesheet" href="ccc.css" />
+<meta charset="UTF-8">
+<title>Trusted Section</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+
+/* ===================== */
+.trustedd {
+  padding: 90px 80px;
+}
+
+/* TITLE */
+.trustedd-title {
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 1.6px;
+  color: #888;
+  margin-bottom: 60px;
+  font-weight: 600;
+}
+
+/* ===================== */
+/* LOGOS */
+/* ===================== */
+.logos {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* 🔥 рівно на всю ширину */
+  align-items: center;
+  width: 100%;
+  margin-bottom: 100px; /* 🔥 опускає весь контент нижче */
+}
+
+.logos img {
+  height: 26px;
+  justify-self: center;
+  opacity: 0.85;
+  filter: grayscale(100%);
+}
+
+/* ===================== */
+/* CONTENT */
+/* ===================== */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 90px;
+}
+
+/* TEXT LEFT */
+.text {
+  max-width: 720px;
+  font-size: 22px;
+  line-height: 1.75;
+  color: #222;
+}
+
+/* ===================== */
+/* COLOR CARD */
+/* ===================== */
+.color-cardd {
+  background: #f6f6f6;
+  border-radius: 20px;
+  padding: 24px 32px;
+  width: 600px;
+}
+
+/* TITLE */
+.color-cardd small {
+  font-size: 14px;
+  letter-spacing: 1.2px;
+  color: #111;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* BOX */
+.color-box {
+  display: flex;
+  gap: 28px;
+}
+
+/* LEFT */
+.color-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.color-sample {
+  width: 72px;
+  height: 72px;
+  border-radius: 10px;
+  background: #301934;
+}
+
+.color-hex {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* RIGHT */
+.color-info h3 {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.color-info p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.3;
+}
+
+/* FOOTER */
+.footer-title {
+  text-align: center;
+  margin-top: 120px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #999;
+  font-weight: 600;
+}
+
+/* ===================== */
+/* RESPONSIVE */
+/* ===================== */
+
+
+
+
+
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Inter, Arial, sans-serif;
+}
+
+body {
+  background: #ffffff;
+  padding: 40px;
+}
+
+.grid {
+  max-width: 1320px;   /* ⬅️ ще трохи ширше */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ===== CARD ===== */
+.card {
+  border-radius: 22px;
+  padding: 40px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card h2 {
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.65;
+  max-width: 95%;
+}
+
+/* ===== BOTTOM LINK ===== */
+.card a {
+  margin-top: auto;
+  padding-top: 28px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: inherit;
+}
+
+.card a span {
+  margin-left: auto;   /* ⬅️ стрілка справа */
+}
+/* ===== HOVER EFFECT ===== */
+.card a:hover {
+  color: #fff;
+}
+
+.card a:hover span {
+  color: #fff;
+}
+
+.card a:hover ~ *,
+.card a:hover {
+  z-index: 2;
+}
+
+.card:hover {
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+/* hover по стрілці → міняємо ВСЮ картку */
+.card a:hover {
+  cursor: pointer;
+}
+
+.card a:hover::before {
+  content: "";
+  position: absolute;
+}
+
+.card a:hover {
+  position: relative;
+}
+
+/* основне правило */
+.card a:hover,
+.card a:hover ~ p,
+.card a:hover ~ h2 {
+  color: #fff;
+}
+
+/* фон стає кольору тексту */
+.card.c1 a:hover { background-color: transparent; }
+.card.c1 a:hover ~ * { background-color: #008a99; }
+
+.card.c2 a:hover ~ * { background-color: #0f4ed8; }
+.card.c3 a:hover ~ * { background-color: #9d28d6; }
+.card.c4 a:hover ~ * { background-color: #d1136b; }
+.card.c5 a:hover ~ * { background-color: #e11d2e; }
+.card.c6 a:hover ~ * { background-color: #f06500; }
+.card.c7 a:hover ~ * { background-color: #c28b00; }
+.card.c8 a:hover ~ * { background-color: #0f9f55; }
+
+/* ===== COLORS (яскравіші) ===== */
+.c1 { background:#d6ffff; color:#008a99; }
+.c2 { background:#e3f0ff; color:#0f4ed8; }
+.c3 { background:#fdeaff; color:#9d28d6; }
+
+.c4 { background:#ffeaf5; color:#d1136b; }
+.c5 { background:#ffe1e1; color:#e11d2e; }
+.c6 { background:#fff0dc; color:#f06500; }
+
+.c7 { background:#fffbcf; color:#c28b00; }
+.c8 { background:#ddffef; color:#0f9f55; }
+/* ===== HOVER ПО ВСЬОМУ БЛОКУ ===== */
+
+.card {
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.card:hover {
+  color: #fff;
+}
+
+/* фон = колір тексту */
+.card.c1:hover { background:#008a99; }
+.card.c2:hover { background:#0f4ed8; }
+.card.c3:hover { background:#9d28d6; }
+
+.card.c4:hover { background:#d1136b; }
+.card.c5:hover { background:#e11d2e; }
+.card.c6:hover { background:#f06500; }
+
+.card.c7:hover { background:#c28b00; }
+.card.c8:hover { background:#0f9f55; }
+
+/* щоб стрілка теж була білою */
+.card:hover a {
+  color: #fff;
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+
+
+
+ :root {
+    --bg: #ffffff;
+    --card-bg: #f7f7f7;
+    --text-primary: #000000;
+    --text-secondary: #5f5f5f;
+    --radius: 20px;
+  }.watermelon {
+    max-width: 1400px;
+    margin: 72px auto;
+    padding: 0 16px;
+  }
+
+  /* 🍋 section title */
+  .lemon {
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 0.14em;
+    font-weight: 700;
+    color: var(--text-secondary);
+    margin-bottom: 56px;
+  }
+
+  /* 🍓 grid */
+  .strawberry {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+    margin-bottom: 130px;
+  }
+
+  /* 🍎 card */
+  .apple {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 40px;
+    min-height: 180px;
+  }
+
+  .apple h3 {
+    font-size: 26px;
+    margin-bottom: 14px;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+  }
+
+  .apple p {
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  /* 🍍 plugins grid */
+  .pineapple {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+  }
+
+  /* 🍊 plugin button */
+  .orange {
+    height: 90px;
+    border-radius: var(--radius);
+    border: 1px solid #e6e6e6;
+    background: #ffffff;
+    font-size: 32px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .strawberry,
+    .pineapple {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+
+
+
+
+
+
+
+  .lion {
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lion h1 {
+    font-size: 140px;
+    font-weight: 400;
+    color: #e3e3e3;
+    text-align: center;
+    line-height: 1.05;
+    letter-spacing: -2px;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    border-top: 1px solid #eee;
+    padding: 60px 80px;
+  }
+
+  .zoo {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+
+  .cage h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #888;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .cage ul {
+    list-style: none;
+  }
+
+  .cage li {
+    font-size: 15px;
+    line-height: 2;
+    color: #111;
+    cursor: pointer;
+  }
+
+  .cage li:hover {
+    text-decoration: underline;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1100px) {
+    .lion h1 {
+      font-size: 80px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .zoo {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lion h1 {
+      font-size: 64px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    footer {
+      padding: 40px 24px;
+    }
+
+    .zoo {
+      grid-template-columns: 1fr;
+    }
+
+    .lion h1 {
+      font-size: 44px;
+    }
+  }
+</style>
 </head>
+
 <body>
 
-<header class="header">
-  <div class="logo">coolors</div>
-  <nav class="nav">
-    <a href="#">Tools</a>
-    <a href="#">Generate</a>
-    <a href="#">Explore</a>
-    <a href="#">Pricing</a>
-    <button class="btn">Sign in</button>
-  </nav>
-</header>
+<section class="trustedd">
 
-<section class="hero">
-  <h1>The super fast<br>color palettes generator!</h1>
-  <p>Create, save and share perfect palettes in seconds.</p>
-  <button class="btn primary">Start the generator</button>
+  <div class="trustedd-title">
+    TRUSTED BY 8+ MILLION CREATIVE MINDS AND TOP COMPANIES
+  </div>
+
+  <!-- LOGOS -->
+  <div class="logos">
+    <img src="https://res.cloudinary.com/coolors/image/upload/v1757421784/media/63efa1d3d16c97552586e2ac6a280a6b2389b88f-100x48.svg">
+    <img src="https://res.cloudinary.com/coolors/image/upload/v1757422149/media/warnerbros.svg">
+    <img src="https://res.cloudinary.com/coolors/image/upload/v1757421758/media/a9bfb23cca986ee16b0547274bcd7461ffd373aa-67x18.svg">
+    <img src="https://res.cloudinary.com/coolors/image/upload/v1757422338/media/5e789db505180ee41e0612d7d53e2ec48c9c5837-153x20.svg">
+    <img src="https://res.cloudinary.com/coolors/image/upload/v1757421784/media/63efa1d3d16c97552586e2ac6a280a6b2389b88f-100x48.svg">
+    <img src="https://res.cloudinary.com/coolors/image/upload/v1757421770/media/cc8b81fd47ded1e82d83258e2f674e0951e20fcc-86x18.svg">
+    <img src="https://res.cloudinary.com/coolors/image/upload/v1757422329/media/c641bb5bbe69c6b42344fd2333924a206ef43736-92x18.svg">
+    <img src="https://res.cloudinary.com/coolors/image/upload/v1757421975/media/1622439415c22e4475400432eae4619d1592a8bc-71x22.svg">
+    <img src="https://res.cloudinary.com/coolors/image/upload/v1757421653/media/Disney_wordmark.svg">
+    <img src="https://res.cloudinary.com/coolors/image/upload/v1757421980/media/fb78b2f382a2d2d93b155601fbc9032379d2515d-79x20.svg">
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content"> <div class="text">
+      Coolors is the lightning-fast, ultra-intuitive color palette generator
+      for designers, creators, and anyone seeking visual harmony.
+      Instantly generate beautiful palettes by hitting the spacebar,
+      or explore millions of popular ones. Extract colors from images,
+      check accessibility, and preview them on real designs.
+      Organize your palettes into projects and export them in multiple
+      formats—effortlessly across web, apps, and plugins. Now with AI!
+    </div>
+
+    <div class="color-cardd">
+      <small>COLOR OF THE DAY</small>
+
+      <div class="color-box">
+        <div class="color-left">
+          <div class="color-sample"></div>
+          <div class="color-hex">#301934</div>
+        </div>
+
+        <div class="color-info">
+          <h3>Midnight Violet</h3>
+          <p>
+            Intense violet-black depths fill any space with intrigue and
+            boldness, channeling mystery and hidden elegance.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-title">
+    OUR TOOLS, LOVED BY MILLIONS
+  </div>
+
 </section>
 
-<section class="tools">
-  <div class="card blue">Palette Generator</div>
-  <div class="card purple">Explore Palettes</div>
-  <div class="card pink">Image Picker</div>
-  <div class="card red">Contrast Checker</div>
-  <div class="card orange">Palette Visualizer</div>
-  <div class="card yellow">Color Picker</div>
-  <div class="card green">Tailwind Colors</div>
-  <div class="card mint">Color Bot</div>
-</section>
 
-<footer class="footer">
-  <p>Make something colorful ✨</p>
-</footer>
 
+
+
+
+
+
+
+
+<div class="grid">
+
+  <div class="card c1">
+    <h2>Palette<br>Generator<br>&nbsp;</h2>
+    <p>
+      Create beautiful color schemes in seconds with the worldwide loved palette tool.
+      Just hit the spacebar!
+    </p>
+    <a href="#">START THE GENERATOR <span>→</span></a>
+  </div>
+
+  <div class="card c2">
+    <h2>Explore<br>Palettes<br>&nbsp;</h2>
+    <p>
+      Get inspired by thousands of beautiful color schemes.
+      Search by colors, styles, topics or hex values.
+    </p>
+    <a href="#">EXPLORE 10M+ PALETTES <span>→</span></a>
+  </div>
+
+  <div class="card c3">
+    <h2>Image<br>Picker<br>&nbsp;</h2>
+    <p>
+      Extract beautiful colors from your photos
+      and turn them into palettes for your projects.
+    </p>
+    <a href="#">LAUNCH THE IMAGE PICKER <span>→</span></a>
+  </div>
+
+<div class="card c4">
+    <h2>Contrast<br>Checker<br>&nbsp;</h2>
+    <p>
+      Calculate the contrast ratio of text and background colors
+      to make your content more accessible.
+    </p>
+    <a href="#">TRY THE CONTRAST CHECKER <span>→</span></a>
+  </div>
+
+  <div class="card c5">
+    <h2>Palette<br>Visualizer<br>&nbsp;</h2>
+    <p>
+      Preview your colors on real designs to see
+      how they look in context before using them in your projects.
+    </p>
+    <a href="#">OPEN THE VISUALIZER <span>→</span></a>
+  </div>
+
+  <div class="card c6">
+    <h2>Color<br>Picker<br>&nbsp;</h2>
+    <p>
+      Get useful color information like meaning,
+      usage, variations, accessibility and conversion.
+    </p>
+    <a href="#">LAUNCH THE COLOR PICKER <span>→</span></a>
+  </div>
+
+  <div class="card c7">
+    <h2>Tailwind<br>Colors<br>&nbsp;</h2>
+    <p>
+      Preview Tailwind CSS colors on real designs
+      to see how they look in context before using them in your projects.
+    </p>
+    <a href="#">PREVIEW TAILWIND COLORS <span>→</span></a>
+  </div>
+
+  <div class="card c8">
+    <h2>Color<br>Bot<br>&nbsp;</h2>
+    <p>
+      Chat with our AI-powered Color Bot,
+      ask questions and get color suggestions for your projects.
+    </p>
+    <a href="#">CHAT WITH COLOR BOT <span>→</span></a>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="watermelon">
+    <div class="lemon">MORE USEFUL RESOURCES</div>
+
+    <div class="strawberry">
+      <div class="apple">
+        <h3>Color Names</h3>
+        <p>Browse and search through a comprehensive list of color names to find the perfect shade for your project.</p>
+      </div>
+
+      <div class="apple">
+        <h3>Free Fonts</h3>
+        <p>Discover and collect beautiful free fonts for your designs from our curated list of typography resources.</p>
+      </div>
+
+      <div class="apple">
+        <h3>Collage Maker</h3>
+        <p>Create stylish collages by combining your photos and palettes in seconds.</p>
+      </div>
+
+      <div class="apple">
+        <h3>Browse Gradients</h3>
+        <p>Explore beautiful gradients for your projects or create your own gradient with the Gradient Maker.</p>
+      </div>
+
+      <div class="apple">
+        <h3>Gradient Palette</h3>
+        <p>Create a gradient palette between two colors and export it in various formats.</p>
+      </div>
+
+      <div class="apple">
+        <h3>Image Converter</h3>
+        <p>Convert images to different formats with ease.</p>
+      </div>
+    </div>
+
+    <div class="lemon">PLUGINS AND APPS</div>
+
+    <div class="pineapple">
+      <div class="orange">iOS App</div>
+      <div class="orange">Figma Plugin</div>
+      <div class="orange">Adobe Extension</div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="lion">
+    <h1>
+      Make something<br>
+      colorful.
+    </h1>
+  </section>
+
+  <footer>
+    <div class="zoo">
+
+      <div class="cage">
+        <h4>Tools</h4>
+        <ul>
+          <li>Generate your palettes</li>
+          <li>Explore popular palettes</li>
+          <li>Extract palette from image</li>
+          <li>Contrast checker</li>
+          <li>Preview palettes on designs</li>
+          <li>Color picker</li>
+          <li>Tailwind Colors</li>
+          <li>Color Bot</li>
+        </ul>
+      </div>
+
+      <div class="cage">
+        <h4>Discover</h4>
+        <ul>
+          <li>List of colors</li>
+          <li>Browse gradients</li>
+          <li>Create a gradient</li>
+          <li>Make a gradient palette</li>
+          <li>Image converter</li>
+          <li>Recolor your own design</li>
+          <li>Create a collage</li>
+          <li>Browse free fonts</li>
+          <li>Font Generator</li>
+        </ul>
+      </div>
+
+      <div class="cage">
+        <h4>Apps</h4>
+        <ul>
+          <li>iOS App</li>
+          <li>Figma Plugin</li>
+          <li>Adobe Extension</li>
+          <li>Chrome Extension</li>
+        </ul>
+      </div>
+
+      <div class="cage">
+        <h4>Company</h4>
+        <ul>
+          <li>Pricing</li>
+          <li>License</li>
+          <li>Terms of service</li>
+          <li>Privacy policy</li>
+          <li>Cookie policy</li>
+          <li>Manage cookies</li>
+          <li>Help center</li>
+          <li>Advertise</li>
+          <li>Affiliate</li>
+          <li>Contact</li>
+          <li>Feature Requests</li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
 </body>
 </html>
