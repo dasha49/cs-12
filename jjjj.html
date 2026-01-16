@@ -1,166 +1,218 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>Make something colorful</title>
+<meta charset="UTF-8">
+<title>Signup Weird</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-  * {
+/* ---------------- базові стилі ---------------- */
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                 Roboto, Helvetica, Arial, sans-serif;
-    background: #fff;
-    color: #111;
-  }
+body {
+    display: flex;
+    height: 100vh;
+}
 
-  /* ===== HERO ===== */
-  .lion {
-    height: 65vh;
+/* ---------------- лівий блок ---------------- */
+.weird-leftside {
+    width: 50%;
+    padding: 80px 90px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.weird-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.weird-header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.weird-subtitle {
+    color: #666;
+}
+
+.weird-form {
+    max-width: 360px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.weird-input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.weird-pass-wrapper {
+    position: relative;
+}
+
+.weird-toggle {
+    position: absolute;
+    right: 14px;
+    top: 45%;
+    transform: translateY(-55%);
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+    opacity: 0.6;
+}
 
-  .lion h1 {
-    font-size: 140px;
-    font-weight: 400;
-    color: #e3e3e3;
-    text-align: center;
-    line-height: 1.05;
-    letter-spacing: -2px;
-  }
+.weird-toggle:hover {
+    opacity: 1;
+}
 
-  /* ===== FOOTER ===== */
-  footer {
-    border-top: 1px solid #eee;
-    padding: 60px 80px;
-  }
-
-  .zoo {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-  }
-
-  .cage h4 {
-    font-size: 14px;
-    font-weight: 600;
-    color: #888;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  .cage ul {
-    list-style: none;
-  }
-
-  .cage li {
+.weird-button {
+    width: 100%;
+    padding: 13px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
     font-size: 15px;
-    line-height: 2;
-    color: #111;
     cursor: pointer;
-  }
+    margin-top: 10px;
+}
 
-  .cage li:hover {
-    text-decoration: underline;
-  }
+.weird-button:hover {
+    background: #1d4ed8;
+}
 
-  /* ===== RESPONSIVE ===== */
-  @media (max-width: 1100px) {
-    .lion h1 {
-      font-size: 80px;
+.weird-signin {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.weird-signin a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.weird-terms {
+    position: absolute;
+    bottom: 20px;
+    left: 90px;
+    font-size: 12px;
+    color: #777;
+}
+
+.weird-terms a {
+    color: #444;
+    text-decoration: none;
+}
+
+/* ---------------- правий блок ---------------- */
+.weird-rightside {
+    width: 50%;
+    background: linear-gradient(
+        135deg,
+        #ff4ecd,
+        #c77dff,
+        #7dd3fc,
+        #bef264
+    );
+}
+
+/* ---------------- responsive ---------------- */
+@media (max-width: 900px) {
+    body {
+        flex-direction: column;
     }
-  }
-
-  @media (max-width: 900px) {
-    .zoo {
-      grid-template-columns: repeat(2, 1fr);
+    .weird-leftside, .weird-rightside {
+        width: 100%;
     }
-
-    .lion h1 {
-      font-size: 64px;
+    .weird-terms {
+        position: static;
+        margin-top: 40px;
     }
-  }
+}
 
-  @media (max-width: 500px) {
-    footer {
-      padding: 40px 24px;
-    }
-
-    .zoo {
-      grid-template-columns: 1fr;
-    }
-
-    .lion h1 {
-      font-size: 44px;
-    }
-  }
+/* ---------------- SVG око ---------------- */
+.weird-eye svg {
+    width: 24px;
+    height: 24px;
+}
 </style>
 </head>
 
 <body>
 
-  <section class="lion">
-    <h1>
-      Make something<br>
-      colorful.
-    </h1>
-  </section>
+<div class="weird-leftside">
 
-  <footer>
-    <div class="zoo">
+    <div class="weird-header">
+        <h1>Sign up</h1>
+        <p class="weird-subtitle">Create a free account with your email.</p>
+    </div>
 
-      <div class="cage">
-        <h4>Tools</h4>
-        <ul>
-          <li>Generate your palettes</li>
-          <li>Explore popular palettes</li>
-          <li>Extract palette from image</li>
-          <li>Contrast checker</li>
-          <li>Preview palettes on designs</li>
-          <li>Color picker</li>
-          <li>Tailwind Colors</li>
-          <li>Color Bot</li>
-        </ul>
-      </div>
+    <div class="weird-form">
+        <input type="text" class="weird-input" placeholder="Full Name">
+        <input type="email" class="weird-input" placeholder="Email">
 
-      <div class="cage">
-        <h4>Discover</h4>
-        <ul>
-          <li>List of colors</li>
-          <li>Browse gradients</li>
-          <li>Create a gradient</li>
-          <li>Make a gradient palette</li>
-          <li>Image converter</li>
-          <li>Recolor your own design</li>
-          <li>Create a collage</li>
-          <li>Browse free fonts</li>
-          <li>Font Generator</li>
-        </ul>
-      </div>
+        <div class="weird-pass-wrapper">
+            <input type="password" id="weird-pass" class="weird-input" placeholder="Password">
+            <span class="weird-toggle" id="weird-toggle">
+                <span class="weird-eye">
+                    <!-- Відкрите око / перекреслення через JS -->
+                    <svg viewBox="0 0 24 24">
+                        <path id="weird-eye-path" fill="none" stroke="#000" stroke-width="2"
+                        d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/>
+                        <circle id="weird-eye-circle" cx="12" cy="12" r="3" fill="none" stroke="#000" stroke-width="2"/>
+                        <line id="weird-eye-line" x1="4" y1="4" x2="20" y2="20" stroke="#000" stroke-width="2" style="display:block"/>
+                    </svg>
+                </span>
+            </span>
+        </div>
 
-      <div class="cage">
-        <h4>Apps</h4>
-        <ul>
-          <li>iOS App</li>
-          <li>Figma Plugin</li>
-          <li>Adobe Extension</li>
-          <li>Chrome Extension</li>
-        </ul>
-      </div>
+        <button class="weird-button">Create your free account</button>
 
-      <div class="cage">
-        <h4>Company</h4>
-        <ul>
-          <li>Pricing</li>
-          <li>License</li>
-          <li>Terms of service</li>
-          <li>Privacy policy</li>
+        <p class="weird-signin">
+            Already have an account? <a href="#">Sign in</a>
+        </p>
+    </div>
+
+    <p class="weird-terms">
+        By continuing, you agree to our
+        <a href="#">Terms of Service</a>.
+        Read our <a href="#">Privacy Policy</a>.
+    </p>
+
+</div>
+<div class="weird-rightside"></div>
+
+<script>
+const weirdPass = document.getElementById("weird-pass");
+const weirdToggle = document.getElementById("weird-toggle");
+const weirdLine = document.getElementById("weird-eye-line");
+
+weirdToggle.addEventListener("click", () => {
+    const hidden = weirdPass.type === "password";
+    weirdPass.type = hidden ? "text" : "password";
+
+    // якщо пароль видно — ховаємо лінію
+    weirdLine.style.display = hidden ? "none" : "block";
+});
+
+// на початку перекреслення видно, бо пароль прихований
+weirdLine.style.display = "block";
+</script>
+
+</body>
+</html>

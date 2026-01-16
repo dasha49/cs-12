@@ -8,10 +8,10 @@ import { Header } from './components/header/header.component'
 import Login from './pages/Login/login'
 import { Generator } from './pages/Generator/generator'
 import  SpecialColor from './pages/SpecialColor/specialcolor'
+import Registration from './pages/Registration/registration'
 // import { Registration } from './pages/Registration/registration/'
 
 
-// 🔹 Генератор випадкового кольору
 const getRandomColor = () => {
   const letters = '0123456789ABCDEF'
   let color = '#'
@@ -37,15 +37,7 @@ function App() {
   }, [])
 
 
-// 🔹 COLOR OF THE DAY (оновлюється при reload сторінки)
-  // const [dailyColor] = useState(getRandomColor())
 
-
-//   const [dailyColor] = useState(() => {
-//   const newColor = getRandomColor()
-//   localStorage.setItem('dailyColor', newColor)
-//   return newColor
-// })
 
 
 const [dailyColor, setDailyColor] = useState('#000000')
@@ -76,6 +68,7 @@ useEffect(() => {
         <Route path="/login" element={<Login />} />
         <Route path="/generator" element={<Generator />} />
         <Route path="/special-color" element={<SpecialColor />} />
+        <Route path="/registration" element={<Registration />} />
         {/* <Route path="/registration" element={<Registration />} /> */}
 
 
@@ -84,7 +77,6 @@ useEffect(() => {
           path="/"
           element={
             <>
-              {/* HERO */}
               <section className="hero">
                 <div className="heroText">
                   <h1>
@@ -147,7 +139,6 @@ useEffect(() => {
                 </Link>
               </section>
 
-              {/* ===== TRUSTED SECTION ===== */}
               <section className="trustedd">
                 <div className="trustedd-title">
                   TRUSTED BY 8+ MILLION CREATIVE MINDS AND TOP COMPANIES
@@ -173,35 +164,7 @@ useEffect(() => {
                    them in multiple formats—effortlessly across web, apps, and plugins. Now with AI!
                   </div>
 
-                  {/* <div className="color-cardd"> */}
-                  {/* <Link to="/special-color" className="color-carddd">
-
-
-                    <small>COLOR OF THE DAY</small>
-
-                    <div className="color-box">
-                      <div className="color-left">
-                        <div className="color-sample"></div>
-                        <div className="color-hex">#301934</div>
-                      </div>
-
-                      <div className="color-innfo">
-                        <h3>Midnight Violet</h3>
-                        <p>
-                          Intense violet-black depths fill any space with
-                          intrigue and boldness.
-                        </p>
-                      </div>
-                    </div>
-
-                  </Link> */}
-
-
-
-
-
-
-
+       
                        <Link to="/special-color" className="color-carddd">
                     <small>COLOR OF THE DAY</small>
 
@@ -232,7 +195,6 @@ useEffect(() => {
                 </div>
               </section>
 
-              {/* ===== GRID CARDS ===== */}
               <div className="grid">
                 {[
                   ['Palette Generator', 'START THE GENERATOR'],
@@ -254,7 +216,6 @@ useEffect(() => {
                 ))}
               </div>
 
-              {/* ===== FINAL SECTION ===== */}
               <section className="lion">
                 <HoverColorLetters
                       text="Make something colorful."
@@ -271,8 +232,6 @@ useEffect(() => {
                       ]}
                     />
               </section>
-
-              
 
 
                <footer>

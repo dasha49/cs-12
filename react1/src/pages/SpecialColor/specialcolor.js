@@ -3,8 +3,6 @@ import './specialcolor.css'
 
 
 
-
-
 export default function SpecialColor() {
   const [fullscreen, setFullscreen] = useState(false)
 
@@ -29,7 +27,6 @@ useEffect(() => {
 
   return (
     <>
-      {/* FULLSCREEN PREVIEW */}
       <div
   className={`fullscreen-preview ${fullscreen ? 'active' : ''}`}
   style={{ backgroundColor: color }}
@@ -63,8 +60,6 @@ useEffect(() => {
           </div>
         </div>
 
-        {/* COLOR PREVIEW */}
-        {/* <div className="color-preview"> */}
         <div
   className="color-preview"
   style={{ backgroundColor: color }}
@@ -86,7 +81,6 @@ useEffect(() => {
            <span>{color.replace('#', '')}</span>
 </div>
 
-        {/* CONVERSION */}
         <h2>Conversion</h2>
         <div className="conversion">
           <table>

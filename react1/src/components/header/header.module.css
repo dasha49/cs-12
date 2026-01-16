@@ -34,14 +34,14 @@
   text-decoration: none; 
   font-size: 15px; 
   font-weight: 500; 
-  color: #222222; 
+  /* color: #222222;  */
   cursor: pointer; 
   display: flex; 
   align-items: center; 
   gap: 6px; 
 } 
  
-.pro { 
+.proooo { 
   color: #ff4d6d; 
   font-weight: 600; 
 } 
@@ -54,7 +54,6 @@
   font-weight: 600; 
 } 
  
-/* TOOLS DROPDOWN */ 
 .tools { 
   position: relative; 
   cursor: pointer; 
@@ -63,7 +62,12 @@
 .toolsBtn { 
   display: flex; 
   align-items: center; 
+  
 } 
+
+.signin{
+    color: #000;
+}
  
 .arrow { 
   width: 12px; 
